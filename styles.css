@@ -1,0 +1,30 @@
+body {
+  background: #f0f0ff;
+}
+
+td {
+  border: #eee solid 1px;
+}
+
+.buttoms-container {
+  position: fixed;
+  font-size: 200%;
+  top: 10px;
+  left: 10px;
+}
+
+.btn {
+  cursor: pointer;
+  background: skyblue;
+  width: 50px;
+  height: 50px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 150%;
+}
+
+.btn:hover{
+    background: black;
+    color: white;
+}
