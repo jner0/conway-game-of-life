@@ -122,3 +122,108 @@ const nextState = () => {
     }
   }
 };
+
+const initializeSpaceshipPattern = () => {
+  clean();
+  // Coordenadas iniciales de las naves espaciales
+  const spaceshipCoordinates = [
+    { x: 10, y: 10 },
+    { x: 11, y: 10 },
+    { x: 12, y: 10 },
+    { x: 12, y: 9 },
+    { x: 11, y: 8 },
+  ];
+
+  // Establece las celdas iniciales como vivas
+  spaceshipCoordinates.forEach((coord) => {
+    const cell = document.getElementById(`cell-${coord.x + "-" + coord.y}`);
+    cell.style.background = "black";
+  });
+};
+
+const initializeOscillatorPattern = () => {
+  clean();
+  // Coordenadas iniciales del oscilador (ejemplo de un oscilador "parpadeante")
+  const oscillatorCoordinates = [
+    { x: 10, y: 10 },
+    { x: 11, y: 10 },
+    { x: 12, y: 10 },
+  ];
+
+  const beaconCoordinates = [
+    { x: 15, y: 15 },
+    { x: 15, y: 16 },
+    { x: 16, y: 15 },
+    { x: 16, y: 16 },
+    { x: 17, y: 17 },
+    { x: 17, y: 18 },
+    { x: 18, y: 17 },
+    { x: 18, y: 18 },
+  ];
+
+  const toadCoordinates = [
+    { x: 23, y: 23 },
+    { x: 24, y: 23 },
+    { x: 25, y: 23 },
+    { x: 22, y: 24 },
+    { x: 23, y: 24 },
+    { x: 24, y: 24 },
+  ];
+
+  // Establece las celdas iniciales como vivas
+  oscillatorCoordinates.forEach((coord) => {
+    const cell = document.getElementById(`cell-${coord.x + "-" + coord.y}`);
+    cell.style.background = "black";
+  });
+  beaconCoordinates.forEach((coord) => {
+    const cell = document.getElementById(`cell-${coord.x + "-" + coord.y}`);
+    cell.style.background = "black";
+  });
+  toadCoordinates.forEach((coord) => {
+    const cell = document.getElementById(`cell-${coord.x + "-" + coord.y}`);
+    cell.style.background = "black";
+  });
+};
+
+const initializeStillLifePattern = () => {
+  clean();
+  // Coordenadas iniciales del patrón "Loaf"
+
+  const tubCoordinates = [
+    { x: 10, y: 10 },
+    { x: 9, y: 11 },
+    { x: 11, y: 11 },
+    { x: 10, y: 12 },
+  ];
+
+  const beehiveCoordinates = [
+    { x: 15, y: 15 },
+    { x: 16, y: 15 },
+    { x: 14, y: 16 },
+    { x: 17, y: 16 },
+    { x: 15, y: 17 },
+    { x: 16, y: 17 },
+  ];
+
+  const boatCoordinates = [
+    { x: 20, y: 20 },
+    { x: 21, y: 20 },
+    { x: 20, y: 21 },
+    { x: 22, y: 21 },
+    { x: 21, y: 22 },
+  ];
+
+  // Establece las celdas iniciales como vivas
+  tubCoordinates.forEach((coord) => {
+    const cell = document.getElementById(`cell-${coord.x + "-" + coord.y}`);
+    cell.style.background = "black";
+  });
+  beehiveCoordinates.forEach((coord) => {
+    const cell = document.getElementById(`cell-${coord.x + "-" + coord.y}`);
+    cell.style.background = "black";
+  });
+  boatCoordinates.forEach((coord) => {
+    const cell = document.getElementById(`cell-${coord.x + "-" + coord.y}`);
+    cell.style.background = "black";
+  });
+};
