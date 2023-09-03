@@ -14,27 +14,32 @@
   <body>
     <div id="table-container"></div>
 
+    <!-- Botones de play, ascelerar y delete -->
     <div class="buttoms-container">
-      <div class="btn" id="btn1" onclick="changeReproduction()">
+      <div class="btn btnH" id="btn1" onclick="changeReproduction()">
         <i class="fas fa-play"></i>
       </div>
-      <div class="btn" id="btn2" onclick="nextState()">
+      <div class="btn btnH" id="btn2" onclick="nextState()">
         <i class="fas fa-step-forward"></i>
       </div>
-      <div class="btn" id="btn3" onclick="clean()">
+      <div class="btn btnH" id="btn3" onclick="clean()">
         <i class="fas fa-eraser"></i>
       </div>
     </div>
 
+    <!-- Botones de patrones -->
     <div class="buttoms-pattern-container">
       <div class="btn" id="btn4" onclick="initializeSpaceshipPattern();">
         <i class="fa-brands fa-space-awesome"></i>
+        <tool-tip role="tooltip"> Patrón naves espaciales </tool-tip>
       </div>
       <div class="btn" id="btn5" onclick="initializeOscillatorPattern();">
         <i class="fa-solid fa-repeat"></i>
+        <tool-tip role="tooltip"> Patrón osciladoress </tool-tip>
       </div>
       <div class="btn" id="btn6" onclick="initializeStillLifePattern();">
         <i class="fa-solid fa-heart-pulse"></i>
+        <tool-tip role="tooltip"> Patrón vidas estáticas </tool-tip>
       </div>
     </div>
   </body>

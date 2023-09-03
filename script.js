@@ -5,8 +5,8 @@ let lado = 20;
 let photo = [];
 let reproducir = false;
 
+//Opciones que me permiten tener control con el teclado
 document.addEventListener("keydown", (e) => {
-  //para tener control con el teclado
   e.preventDefault();
   switch (e.key) {
     case "ArrowRight":
@@ -27,6 +27,7 @@ setInterval(() => {
   }
 }, 200);
 
+//Funcion que cambia el color de fondo para saber cuando esta en play y cuando esta en pause
 const changeReproduction = () => {
   reproducir = !reproducir;
   if (reproducir) {
@@ -38,10 +39,12 @@ const changeReproduction = () => {
   }
 };
 
+//Al iniciar la app se genera la tabla
 document.addEventListener("DOMContentLoaded", () => {
   generateTable();
 });
 
+//Funcion para generar la tabla con sus respectivas cuadriculas
 const generateTable = () => {
   let html = "<table cellpadding=0 cellspacing=0 id='board'>";
   for (let y = 0; y < rows; y++) {
@@ -62,6 +65,7 @@ const generateTable = () => {
   tablero.style.height = lado * columns + "px";
 };
 
+//Funcion para cambiar el estado de vivas a muertas
 const changeState = (x, y) => {
   let cell = document.getElementById(`cell-${x + "-" + y}`);
   if (cell.style.background != "black") {
@@ -71,6 +75,7 @@ const changeState = (x, y) => {
   }
 };
 
+//Funcion para limpiar la tabla
 const clean = () => {
   for (let x = 0; x < columns; x++) {
     for (let y = 0; y < columns; y++) {
@@ -80,6 +85,7 @@ const clean = () => {
   }
 };
 
+//Funcion que me permite fotografiar para saber el estado de cierta celula
 const capture = () => {
   photo = [];
   for (let x = 0; x < columns; x++) {
@@ -91,6 +97,7 @@ const capture = () => {
   }
 };
 
+//Funcion para contar las celulas vivas
 const countAlives = (x, y) => {
   let alives = 0;
   for (let i = -1; i <= 1; i++) {
@@ -107,6 +114,7 @@ const countAlives = (x, y) => {
   return alives;
 };
 
+//Funcion para pasar al siguiente estado
 const nextState = () => {
   capture();
   for (let x = 0; x < columns; x++) {
@@ -122,6 +130,8 @@ const nextState = () => {
     }
   }
 };
+
+//Funcion de los diferentes patrones
 
 const initializeSpaceshipPattern = () => {
   clean();
